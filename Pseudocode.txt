@@ -1,0 +1,46 @@
+START
+
+Initialize empty list called "students"
+Initialize variable "total_score" as 0
+
+Ask user: "How many students?"
+Store input in variable "num_students"
+
+FOR each student from 1 to num_students:
+    Prompt user: "Enter student name"
+    Store input in variable "name"
+
+    Prompt user: "Enter student score"
+    Store input in variable "score"
+
+    IF score >= 70:
+        grade = 'A'
+    ELSE IF score >= 60:
+        grade = 'B'
+    ELSE IF score >= 50:
+        grade = 'C'
+    ELSE IF score >= 45:
+        grade = 'D'
+    ELSE IF score >= 40:
+        grade = 'E'
+    ELSE:
+        grade = 'F'
+
+    Create a dictionary with name, score, and grade
+    Add it to the "students" list
+
+    Add score to "total_score"
+
+END FOR
+
+Display table header: Name, Score, Grade
+
+FOR each student in students:
+    Print student name, score, and grade in columns
+END FOR
+
+Calculate average = total_score / num_students
+Display: "Class Average Score"
+Display: "Class Average Grade" (use same grading logic)
+
+END
